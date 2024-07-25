@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>楽曲操作システム★登録確認</h2>
+	<h3><font color="red">登録してよろしいですか？</font></h3>
+	楽曲名：[[${musicForm.song_name}]]
+	歌手名：[[${musicForm.singer}]]
+    <form th:action="@{/menu}" method="post">
+    	<input type="hidden" name="song_name" th:value="${musicForm.song_name}"><br>
+    	<input type="hidden" name="singer" th:value="${musicForm.singer}">
+        <button type="submit" name="complete">登録</button>
+        <button type="button" onclick="history.back()">戻る</button>
+    </form>
+    <h2>SD3E 村上慶</h2>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h2>楽曲操作システム</h2>
+	<form th:action="@{/menu}" method="post">
+		<input type="submit" value="一覧" name="select">
+		<input type="submit" value="登録" name="input">
+		<input type="submit" value="更新" name="update">
+		<input type="submit" value="削除" name="delete">
+	</form>
+	<h2>SD3E 村上慶</h2>
+</body>
+</html>

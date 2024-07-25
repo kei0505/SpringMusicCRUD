@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+	<link th:href="@{css/style.css}" rel="stylesheet">
+    <title>楽曲操作システム★削除</title>
+</head>
+<body>
+<h2>楽曲操作システム★削除</h2>
+<form th:action="@{/menu}" method="post">
+	<button type="submit" name="delete-confirm">削除</button>
+    <p><a href="#" onclick="window.history.back(); return false;">メニューに戻る</a></p>
+    <table border="1">
+        <tr>
+            <td></td>
+            <td>曲番号</td>
+            <td>曲名</td>
+            <td>歌手名</td>
+        </tr>
+        <tr th:each="name : ${list}">
+            <td><input type="radio" name="song_id" th:value="${name.song_id}" required></td>
+            <td th:text="${name.song_id}"></td>
+            <td th:text="${name.song_name}"></td>
+            <td th:text="${name.singer}"></td>
+        </tr>
+    </table>
+</form>
+<h2>SD3E 村上慶</h2>
+</body>
+</html>

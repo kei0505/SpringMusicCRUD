@@ -1,0 +1,31 @@
+table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+table thead tr {
+  background-color: #00aaff;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f4feff;
+}
+
+table tbody tr:nth-of-type(odd) {
+  background-color: #e1f5fe;
+}
+
+table td {
+  color: #333;
+}
